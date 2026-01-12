@@ -37,13 +37,19 @@ class TestE2EShopping:
         driver.get(base_url)
         
         # Initialize page objects
+        login_page = LoginPage(driver)
         search_page = SearchPage(driver)
         product_page = ProductPage(driver)
         cart_page = CartPage(driver)
         
-        # Step 1: Authentication (optional - can be guest checkout)
-        # login_page = LoginPage(driver)
-        # login_page.login(username, password)
+        # Step 1: Authentication (optional - set login_enabled=true in test_data.json)
+        if test_data.get("login_enabled", False):
+            username = test_data.get("username")
+            password = test_data.get("password")
+            if username and password:
+                login_page.login(username, password)
+            else:
+                print("Login enabled but credentials not provided in test_data.json")
         
         # Step 2: searchItemsByNameUnderPrice
         product_urls = self.search_items_by_name_under_price(

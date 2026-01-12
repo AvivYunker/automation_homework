@@ -4,9 +4,12 @@ Pytest configuration and fixtures
 import pytest
 import json
 import os
+from dotenv import load_dotenv
 from utils.driver_factory import DriverFactory
 from utils.logger import Logger
 
+# Load environment variables from .env file
+load_dotenv()
 
 @pytest.fixture(scope="function")
 def driver(request):
@@ -43,7 +46,7 @@ def driver(request):
 @pytest.fixture(scope="session")
 def test_data():
     """
-    Test data fixture - loads data from JSON file
+    Test data fixture - loads data from JSON file and environment variables
     
     Implements Data-Driven testing requirement from PDF
     """
@@ -56,13 +59,28 @@ def test_data():
         logger.info(f"Loading test data from: {data_file}")
         with open(data_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
-        logger.info(f"Test data loaded: {data}")
+        
+        # Override credentials from environment variables if available
+        if os.getenv("EBAY_USERNAME"):
+            data["username"] = os.getenv("EBAY_USERNAME")
+            logger.info("Using username from environment variable")
+        if os.getenv("EBAY_PASSWORD"):
+            data["password"] = os.getenv("EBAY_PASSWORD")
+            logger.info("Using password from environment variable")
+        if os.getenv("LOGIN_ENABLED"):
+            data["login_enabled"] = os.getenv("LOGIN_ENABLED").lower() == "true"
+            logger.info(f"Login enabled from .env: {data['login_enabled']}")
+        
+        logger.info(f"Test data loaded successfully")
         return data
     else:
         # Default test data if file doesn't exist
         logger.warning(f"Test data file not found: {data_file}. Using defaults.")
         default_data = {
             "base_url": "https://www.ebay.com",
+            "username": os.getenv("EBAY_USERNAME", ""),
+            "password": os.getenv("EBAY_PASSWORD", ""),
+            "login_enabled": os.getenv("LOGIN_ENABLED", "false").lower() == "true",
             "search_query": "shoes",
             "max_price": 220,
             "item_limit": 5

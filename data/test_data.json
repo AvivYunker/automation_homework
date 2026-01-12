@@ -1,5 +1,8 @@
 {
   "base_url": "https://www.ebay.com",
+  "username": "your_email@example.com",
+  "password": "your_password",
+  "login_enabled": true,
   "search_query": "shoes",
   "max_price": 220,
   "item_limit": 5,

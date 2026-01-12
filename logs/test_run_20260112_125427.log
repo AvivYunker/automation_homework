@@ -1,0 +1,123 @@
+2026-01-12 12:54:27 - AutomationFramework - INFO - Loading test data from: data\test_data.json
+2026-01-12 12:54:27 - AutomationFramework - INFO - Using username from environment variable
+2026-01-12 12:54:27 - AutomationFramework - INFO - Using password from environment variable
+2026-01-12 12:54:27 - AutomationFramework - INFO - Login enabled from .env: True
+2026-01-12 12:54:27 - AutomationFramework - INFO - Test data loaded successfully
+2026-01-12 12:54:27 - AutomationFramework - INFO - ================================================================================
+2026-01-12 12:54:27 - AutomationFramework - INFO - Starting test: test_ebay_shopping_flow
+2026-01-12 12:54:27 - AutomationFramework - INFO - ================================================================================
+2026-01-12 12:54:27 - AutomationFramework - INFO - Creating local chrome driver (headless=False)
+2026-01-12 12:54:30 - AutomationFramework - INFO - Attempting to login with username: johnmckay1229@gmail.com
+2026-01-12 12:54:30 - AutomationFramework - INFO - Clicking 'Sign in' link to navigate to login page
+2026-01-12 12:54:30 - AutomationFramework - INFO - Attempting to find 'Sign In Link' using locator 1/3: xpath='//a[contains(text(), 'Sign in')]'
+2026-01-12 12:54:30 - AutomationFramework - INFO - Successfully found 'Sign In Link' using locator 1
+2026-01-12 12:54:31 - AutomationFramework - INFO - Clicked on 'Sign In Link'
+2026-01-12 12:54:33 - AutomationFramework - INFO - Attempting to find 'Username Input' using locator 1/3: id='userid'
+2026-01-12 12:54:34 - AutomationFramework - INFO - Successfully found 'Username Input' using locator 1
+2026-01-12 12:54:34 - AutomationFramework - INFO - Sent keys to 'Username Input': johnmckay1229@gmail.com
+2026-01-12 12:54:35 - AutomationFramework - INFO - Clicking 'Continue' button after entering email
+2026-01-12 12:54:35 - AutomationFramework - INFO - Attempting to find 'Continue Button' using locator 1/3: id='signin-continue-btn'
+2026-01-12 12:54:35 - AutomationFramework - INFO - Successfully found 'Continue Button' using locator 1
+2026-01-12 12:54:35 - AutomationFramework - INFO - Clicked on 'Continue Button'
+2026-01-12 12:54:38 - AutomationFramework - INFO - Attempting to find 'Password Input' using locator 1/3: id='pass'
+2026-01-12 12:54:38 - AutomationFramework - INFO - Successfully found 'Password Input' using locator 1
+2026-01-12 12:54:38 - AutomationFramework - INFO - Sent keys to 'Password Input': zxcasdqwe123
+2026-01-12 12:54:39 - AutomationFramework - INFO - Attempting to find 'Login Button' using locator 1/3: id='sgnBt'
+2026-01-12 12:54:39 - AutomationFramework - INFO - Successfully found 'Login Button' using locator 1
+2026-01-12 12:54:39 - AutomationFramework - INFO - Clicked on 'Login Button'
+2026-01-12 12:54:43 - AutomationFramework - INFO - Screenshot saved: screenshots\after_login_20260112_125442.png
+2026-01-12 12:54:43 - AutomationFramework - INFO - Searching for: shoes
+2026-01-12 12:54:43 - AutomationFramework - INFO - Attempting to find 'Search Input' using locator 1/2: id='gh-ac'
+2026-01-12 12:54:43 - AutomationFramework - INFO - Successfully found 'Search Input' using locator 1
+2026-01-12 12:54:43 - AutomationFramework - INFO - Sent keys to 'Search Input': shoes
+2026-01-12 12:54:43 - AutomationFramework - INFO - Attempting to find 'Search Button' using locator 1/2: id='gh-btn'
+2026-01-12 12:54:54 - AutomationFramework - WARNING - Locator 1/2 failed for 'Search Button': id='gh-btn'
+2026-01-12 12:54:54 - AutomationFramework - INFO - Attempting to find 'Search Button' using locator 2/2: xpath='//input[@type='submit' and @value='Search']'
+2026-01-12 12:55:04 - AutomationFramework - WARNING - Locator 2/2 failed for 'Search Button': xpath='//input[@type='submit' and @value='Search']'
+2026-01-12 12:55:04 - AutomationFramework - ERROR - All 2 locators failed for 'Search Button'
+2026-01-12 12:55:04 - AutomationFramework - INFO - Screenshot saved: screenshots\locator_failure_Search Button_20260112_125504.png
+2026-01-12 12:55:04 - AutomationFramework - WARNING - Could not click search button: Message: Could not find 'Search Button' with any of the 2 locators; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2026-01-12 12:55:04 - AutomationFramework - INFO - Pressing Enter key to search instead
+2026-01-12 12:55:04 - AutomationFramework - INFO - Attempting to find 'Search Input' using locator 1/2: id='gh-ac'
+2026-01-12 12:55:04 - AutomationFramework - INFO - Successfully found 'Search Input' using locator 1
+2026-01-12 12:55:09 - AutomationFramework - INFO - Screenshot saved: screenshots\search_results_shoes_20260112_125507.png
+2026-01-12 12:55:09 - AutomationFramework - INFO - Applying price filter: max $220
+2026-01-12 12:55:09 - AutomationFramework - INFO - Attempting to find 'Max Price Input' using locator 1/2: xpath='//input[@aria-label='Maximum Value in $']'
+2026-01-12 12:55:19 - AutomationFramework - WARNING - Locator 1/2 failed for 'Max Price Input': xpath='//input[@aria-label='Maximum Value in $']'
+2026-01-12 12:55:19 - AutomationFramework - INFO - Attempting to find 'Max Price Input' using locator 2/2: xpath='//input[contains(@class, 'x-textrange__input--to')]'
+2026-01-12 12:55:30 - AutomationFramework - WARNING - Locator 2/2 failed for 'Max Price Input': xpath='//input[contains(@class, 'x-textrange__input--to')]'
+2026-01-12 12:55:30 - AutomationFramework - ERROR - All 2 locators failed for 'Max Price Input'
+2026-01-12 12:55:30 - AutomationFramework - INFO - Screenshot saved: screenshots\locator_failure_Max Price Input_20260112_125530.png
+2026-01-12 12:55:30 - AutomationFramework - WARNING - Could not apply price filter: Message: Could not find 'Max Price Input' with any of the 2 locators; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2026-01-12 12:55:30 - AutomationFramework - INFO - Collecting up to 5 items under $220
+2026-01-12 12:55:30 - AutomationFramework - INFO - Processing page 1
+2026-01-12 12:55:30 - AutomationFramework - INFO - Attempting to find 'Product Items' using locator 1/2
+2026-01-12 12:55:40 - AutomationFramework - WARNING - Locator 1 returned 0 elements
+2026-01-12 12:55:40 - AutomationFramework - INFO - Attempting to find 'Product Items' using locator 2/2
+2026-01-12 12:55:52 - AutomationFramework - WARNING - Locator 2 returned 0 elements
+2026-01-12 12:55:52 - AutomationFramework - ERROR - All locators failed for 'Product Items'
+2026-01-12 12:55:52 - AutomationFramework - INFO - Attempting to find 'Product Prices' using locator 1/2
+2026-01-12 12:55:57 - AutomationFramework - WARNING - Locator 1/2 failed: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=143.0.7499.193)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff69b3688d5
+	0x7ff69b368930
+	0x7ff69b14165d
+	0x7ff69b12d82c
+	0x7ff69b12d78c
+	0x7ff69b12bfaa
+	0x7ff69b12cbcf
+	0x7ff69b146ef6
+	0x7ff69b1479fa
+	0x7ff69b14c3b4
+	0x7ff69b14c47f
+	0x7ff69b1992e5
+	0x7ff69b199d3c
+	0x7ff69b1edf97
+	0x7ff69b1eac97
+	0x7ff69b18ac29
+	0x7ff69b18ba93
+	0x7ff69b680620
+	0x7ff69b67af60
+	0x7ff69b6996c6
+	0x7ff69b385dd4
+	0x7ff69b38ed7c
+	0x7ff69b371ff4
+	0x7ff69b3721a5
+	0x7ff69b357ed2
+	0x7ffe5618e8d7
+	0x7ffe57aac53c
+
+2026-01-12 12:55:57 - AutomationFramework - INFO - Attempting to find 'Product Prices' using locator 2/2
+2026-01-12 12:55:57 - AutomationFramework - WARNING - Locator 2/2 failed: Message: invalid session id
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff69b3688d5
+	0x7ff69b368930
+	0x7ff69b141465
+	0x7ff69b189d83
+	0x7ff69b1c1ee2
+	0x7ff69b1bc500
+	0x7ff69b1bb6f0
+	0x7ff69b10b325
+	0x7ff69b680620
+	0x7ff69b67af60
+	0x7ff69b6996c6
+	0x7ff69b385dd4
+	0x7ff69b38ed7c
+	0x7ff69b109cb8
+	0x7ff69b7defe8
+	0x7ffe5618e8d7
+	0x7ffe57aac53c
+
+2026-01-12 12:55:57 - AutomationFramework - ERROR - All locators failed for 'Product Prices'
+2026-01-12 12:55:57 - AutomationFramework - WARNING - No products found on this page
+2026-01-12 12:55:57 - AutomationFramework - INFO - Collected 0 items total
+2026-01-12 12:55:57 - AutomationFramework - INFO - ================================================================================
+2026-01-12 12:55:57 - AutomationFramework - INFO - Finishing test: test_ebay_shopping_flow
+2026-01-12 12:55:57 - AutomationFramework - INFO - ================================================================================
+2026-01-12 12:55:59 - AutomationFramework - INFO - Driver closed successfully

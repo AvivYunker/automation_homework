@@ -61,8 +61,18 @@ class SearchPage(BasePage):
         """
         self.logger.info(f"Searching for: {query}")
         self.send_keys_with_fallback(self.SEARCH_INPUT, query, "Search Input")
-        self.click_with_fallback(self.SEARCH_BUTTON, "Search Button")
-        time.sleep(2)  # Wait for results to load
+        
+        # Try to click search button, if it fails, press Enter key
+        try:
+            self.click_with_fallback(self.SEARCH_BUTTON, "Search Button")
+        except Exception as e:
+            self.logger.warning(f"Could not click search button: {str(e)}")
+            self.logger.info("Pressing Enter key to search instead")
+            from selenium.webdriver.common.keys import Keys
+            search_input = self.find_element_with_fallback(self.SEARCH_INPUT, "Search Input")
+            search_input.send_keys(Keys.RETURN)
+        
+        time.sleep(3)  # Wait for results to load
         self.screenshot.take_screenshot(f"search_results_{query}")
     
     def apply_price_filter(self, max_price: float):

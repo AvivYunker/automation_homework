@@ -1,0 +1,20 @@
+2026-01-12 12:43:37 - AutomationFramework - INFO - Loading test data from: data\test_data.json
+2026-01-12 12:43:37 - AutomationFramework - INFO - Test data loaded: {'base_url': 'https://www.ebay.com', 'username': 'your_email@example.com', 'password': 'your_password', 'login_enabled': True, 'search_query': 'shoes', 'max_price': 220, 'item_limit': 5, 'timeout': 10, 'screenshots_enabled': True, 'test_scenarios': [{'name': 'shoes_under_220', 'search_query': 'shoes', 'max_price': 220, 'item_limit': 5}, {'name': 'laptop_under_500', 'search_query': 'laptop', 'max_price': 500, 'item_limit': 3}, {'name': 'phone_under_300', 'search_query': 'phone', 'max_price': 300, 'item_limit': 2}]}
+2026-01-12 12:43:37 - AutomationFramework - INFO - ================================================================================
+2026-01-12 12:43:37 - AutomationFramework - INFO - Starting test: test_ebay_shopping_flow
+2026-01-12 12:43:37 - AutomationFramework - INFO - ================================================================================
+2026-01-12 12:43:37 - AutomationFramework - INFO - Creating local chrome driver (headless=False)
+2026-01-12 12:43:40 - AutomationFramework - INFO - Attempting to login with username: your_email@example.com
+2026-01-12 12:43:40 - AutomationFramework - INFO - Clicking 'Sign in' link to navigate to login page
+2026-01-12 12:43:40 - AutomationFramework - INFO - Attempting to find 'Sign In Link' using locator 1/3: xpath='//a[contains(text(), 'Sign in')]'
+2026-01-12 12:43:40 - AutomationFramework - INFO - Successfully found 'Sign In Link' using locator 1
+2026-01-12 12:43:41 - AutomationFramework - INFO - Clicked on 'Sign In Link'
+2026-01-12 12:43:41 - AutomationFramework - INFO - Attempting to find 'Username Input' using locator 1/3: id='userid'
+2026-01-12 12:43:41 - AutomationFramework - INFO - Successfully found 'Username Input' using locator 1
+2026-01-12 12:43:41 - AutomationFramework - INFO - Sent keys to 'Username Input': your_email@example.com
+2026-01-12 12:43:41 - AutomationFramework - INFO - Attempting to find 'Password Input' using locator 1/3: id='pass'
+2026-01-12 12:43:42 - AutomationFramework - INFO - Successfully found 'Password Input' using locator 1
+2026-01-12 12:43:52 - AutomationFramework - INFO - ================================================================================
+2026-01-12 12:43:52 - AutomationFramework - INFO - Finishing test: test_ebay_shopping_flow
+2026-01-12 12:43:52 - AutomationFramework - INFO - ================================================================================
+2026-01-12 12:43:54 - AutomationFramework - INFO - Driver closed successfully
