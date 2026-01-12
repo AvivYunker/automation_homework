@@ -1,0 +1,28 @@
+{
+  "base_url": "https://www.ebay.com",
+  "search_query": "shoes",
+  "max_price": 220,
+  "item_limit": 5,
+  "timeout": 10,
+  "screenshots_enabled": true,
+  "test_scenarios": [
+    {
+      "name": "shoes_under_220",
+      "search_query": "shoes",
+      "max_price": 220,
+      "item_limit": 5
+    },
+    {
+      "name": "laptop_under_500",
+      "search_query": "laptop",
+      "max_price": 500,
+      "item_limit": 3
+    },
+    {
+      "name": "phone_under_300",
+      "search_query": "phone",
+      "max_price": 300,
+      "item_limit": 2
+    }
+  ]
+}
