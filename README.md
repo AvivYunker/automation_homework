@@ -1,5 +1,7 @@
 # eBay Automation Testing Framework
 
+> **📝 Note:** The answer to the AI Generated Code Review can be found in [ai_generated_code_review.md](ai_generated_code_review.md)
+
 ## Project Overview
 This is a comprehensive automation testing framework for eBay, implementing the Page Object Model (POM) design pattern with Playwright. The framework automates user login, profile validation, product search, and shopping cart operations.
 
@@ -69,10 +71,15 @@ automation_homework/
    source .venv/bin/activate
    ```
 
-3. **Install dependencies**
+3. **Install dependencies from requirements.txt**
    ```bash
    pip install -r requirements.txt
    ```
+   This will install all necessary Python packages including:
+   - Playwright for browser automation
+   - Pytest for testing framework
+   - Python-dotenv for environment variables
+   - And other dependencies listed in requirements.txt
 
 4. **Install Playwright browsers**
    ```bash
@@ -88,7 +95,9 @@ automation_homework/
 
 ## Usage
 
-### Run Demo Script
+### How to Run the Program
+
+#### Option 1: Run the Main Demo Script
 The main demo script performs the complete automation flow:
 
 ```bash
@@ -102,6 +111,25 @@ python demo_login.py
 4. Searches for "chair" items
 5. Randomly selects and adds 5 chairs to shopping cart
 6. Opens shopping cart to display all items
+
+#### Option 2: Run the Test Suite
+Execute the smoke test suite using pytest:
+
+```bash
+# Run all tests
+pytest tests/
+
+# Run with verbose output
+pytest tests/ -v
+
+# Run specific test file
+pytest tests/test_smoke.py -v
+```
+
+#### Other Demo Scripts
+- `demo_visible.py` - Demo with visible browser interaction
+- `inspect_page.py` - Page inspection utilities
+- `debug_login.py` - Debug login flow
 
 ### Run Tests
 Execute the smoke test suite:
