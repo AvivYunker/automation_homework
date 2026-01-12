@@ -1,20 +1,31 @@
-# Selenium WebDriver
-selenium==4.16.0
+# Core Automation Framework
+playwright==1.41.0
+pytest==8.0.0
+pytest-playwright==0.4.4
 
-# Testing Framework
-pytest==7.4.3
-pytest-html==4.1.1
+# Parallel Execution
 pytest-xdist==3.5.0
+pytest-parallel==0.1.1
 
 # Reporting
 allure-pytest==2.13.2
+pytest-html==4.1.1
 
-# Data handling
-PyYAML==6.0.1
-PyPDF2==3.0.1
+# Data Handling
+pyyaml==6.0.1
+python-dotenv==1.0.1
+
+# Selenium Grid Support (as mentioned in requirements)
+selenium==4.18.0
+webdriver-manager==4.0.1
 
 # Utilities
-python-dotenv==1.0.0
+Pillow==10.2.0  # For image processing/screenshots
+requests==2.31.0  # For API calls if needed
 
-# WebDriver Manager (optional - for automatic driver management)
-webdriver-manager==4.0.1
+# Logging
+colorlog==6.8.2  # For colored console logs
+
+# Code Quality (optional but recommended)
+pytest-timeout==2.2.0
+pytest-rerunfailures==13.0  # For test retry on failure
